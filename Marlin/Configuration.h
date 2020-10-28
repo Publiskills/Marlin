@@ -406,7 +406,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -484,9 +484,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  #define DEFAULT_Kp 22.99
+  #define DEFAULT_Ki 1.82
+  #define DEFAULT_Kd 72.51
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -730,7 +730,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.55, 79.46, 398.66, 143.82 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.55, 79.46, 398.66, 427.84 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -956,7 +956,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { -30, -28, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 38.2, 0, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1063,7 +1063,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1092,12 +1092,12 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 210
-#define Y_BED_SIZE 220
+#define X_BED_SIZE 215
+#define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -9
-#define Y_MIN_POS 0
+#define X_MIN_POS 0
+#define Y_MIN_POS -10
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
@@ -1140,7 +1140,7 @@
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  * By default the firmware assumes HIGH=FILAMENT PRESENT.
  */
-#define FILAMENT_RUNOUT_SENSOR
+//#define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define NUM_RUNOUT_SENSORS   1     // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
   #define FIL_RUNOUT_INVERTING true // Set to true to invert the logic of the sensor.
