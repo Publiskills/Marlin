@@ -517,7 +517,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -1092,12 +1092,12 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 225 //235 to full
-#define Y_BED_SIZE 208 //235 to full
+#define X_BED_SIZE 230 //235 to full
+#define Y_BED_SIZE 230 //235 to full
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -14 //-9 to full
-#define Y_MIN_POS -14 //-1 to full
+#define X_MIN_POS -9.5
+#define Y_MIN_POS -3
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
